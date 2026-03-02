@@ -14,7 +14,8 @@ user-agents
 requests
 django-graphql-jwt
 graphene-django-cud
-
+psycopg2-binary
+psycopg2
 
 # Optional: Uncomment if using PostgreSQL in production
 # psycopg2-binary>=2.9.0

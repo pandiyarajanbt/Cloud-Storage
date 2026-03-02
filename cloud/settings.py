@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'graphene_django',
+    'users',
 ]
 
 GRAPHENE = {
@@ -90,13 +91,24 @@ WSGI_APPLICATION = 'cloud.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
+#DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv("DATABASE_NAME"),
+        'USER': os.getenv("DATABASE_USER"),      # Database Username
+        'PASSWORD': os.getenv("DATABASE_PASSWORD"),
+        'HOST': os.getenv("DATABASE_HOST"),         # Host
+        'PORT': os.getenv("DATABASE_PORT"),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators
