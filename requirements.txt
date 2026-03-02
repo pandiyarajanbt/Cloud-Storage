@@ -1,0 +1,23 @@
+Django>=4.2.0
+graphene-django
+django-cors-headers>=4.0.0
+django-filter>=23.0
+python-dotenv>=1.0.0
+PyMySQL>=1.1.0
+requests>=2.28.0
+reportlab>=3.6.0
+channels>=4.0.0
+num2words>=0.5.12
+Pillow>=10.0.0
+gunicorn
+user-agents
+requests
+django-graphql-jwt
+graphene-django-cud
+
+
+# Optional: Uncomment if using PostgreSQL in production
+# psycopg2-binary>=2.9.0
+
+# Optional: Uncomment if serving static files in production
+# whitenoise>=6.5.0
