@@ -32,3 +32,4 @@ class RegisterMutation(graphene.Mutation):
 class UserMutation(graphene.ObjectType):
     register = RegisterMutation.Field()
     token_auth = graphql_jwt.ObtainJSONWebToken.Field()
+    refresh = graphql_jwt.Refresh.Field()
