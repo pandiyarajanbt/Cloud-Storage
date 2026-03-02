@@ -2,17 +2,13 @@ import graphene
 
 # User
 from users.schema.mutation import UserMutation
+from users.schema.types import UserQuery
 
-class Query(graphene.ObjectType):
-    ping = graphene.String()
-
-    def resolve_ping(root, info):
-        return "pong"
-
+class Query(UserQuery, graphene.ObjectType):
+    pass
 
 class Mutation(UserMutation, graphene.ObjectType):
     pass
-
 
 
 schema = graphene.Schema(query=Query, mutation=Mutation)
