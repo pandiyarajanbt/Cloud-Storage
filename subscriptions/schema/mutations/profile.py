@@ -1,6 +1,7 @@
 import graphene
 from graphene_django_cud.mutations import DjangoCreateMutation, DjangoUpdateMutation
 from subscriptions.models import Profile
+from subscriptions.schema.types.profile import ProfileType  # noqa: F401  (ensures model type is registered)
 
 class CreateProfileMutation(DjangoCreateMutation):
     class Meta:
