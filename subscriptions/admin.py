@@ -1,3 +1,9 @@
 from django.contrib import admin
+from subscriptions.models import(
+    Plan, Profile, StorageNode, Storage
+)
 
-# Register your models here.
+admin.site.register(Profile)
+admin.site.register(Plan)
+admin.site.register(StorageNode)
+admin.site.register(Storage)

@@ -4,10 +4,14 @@ import graphene
 from users.schema.mutation import UserMutation
 from users.schema.types import UserQuery
 
-class Query(UserQuery, graphene.ObjectType):
+# Subscription
+from subscriptions.schema.mutations import CreateProfileMutation
+from subscriptions.schema.types import SubscritionsQuery
+
+class Query(UserQuery, SubscritionsQuery, graphene.ObjectType):
     pass
 
-class Mutation(UserMutation, graphene.ObjectType):
+class Mutation(UserMutation, CreateProfileMutation, graphene.ObjectType):
     pass
 
 
