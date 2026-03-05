@@ -1,12 +1,7 @@
 import graphene
-from django.contrib.auth import get_user_model
-from django.contrib.messages import success
 from graphql import GraphQLError
-from gunicorn.config import User
 from users.models import User
 import graphql_jwt
-
-user = get_user_model()
 
 
 class RegisterMutation(graphene.Mutation):
